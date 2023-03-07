@@ -20,9 +20,16 @@
     function getUsers() {
         include "ayar.php";
 
-        $query = "SELECT username, mail, number from uyeler";
+        $query = "SELECT id, username, mail, number from uyeler";
         $result = mysqli_query($baglanti, $query);
         mysqli_close($baglanti);
+        return $result;
+    }
+
+    function deleteUser(int $id) {
+        include "ayar.php";
+        $query = "DELETE FROM uyeler WHERE id=$id";
+        $result = mysqli_query($baglanti,$query);
         return $result;
     }
 
