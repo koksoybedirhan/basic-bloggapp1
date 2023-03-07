@@ -27,7 +27,7 @@
         }
 
         if(empty($username_err) && empty($password_err)) {
-            $sql = "SELECT username, password FROM uyeler WHERE username = ?";
+            $sql = "SELECT username, password, mail, number, image, userType FROM uyeler WHERE username = ?";
 
             if($durum = mysqli_prepare($baglanti, $sql)) {
 
@@ -39,11 +39,16 @@
                     mysqli_stmt_store_result($durum);
 
                     if(mysqli_stmt_num_rows($durum) == 1) {
-                        mysqli_stmt_bind_result($durum,$username,$password);
+  
+                        mysqli_stmt_bind_result($durum,$username,$password, $mail, $number, $image, $userType);
                         if(mysqli_stmt_fetch($durum)) 
                         {            
                             $_SESSION["loggedin"] = true;
                             $_SESSION["username"] = $username;
+                            $_SESSION["mail"] = $mail;
+                            $_SESSION["number"] = $number;
+                            $_SESSION["image"] = $image;
+                            $_SESSION["userType"] = $userType;
 
                             header("location: profile.php");
                         } 
