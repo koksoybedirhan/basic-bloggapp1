@@ -17,6 +17,15 @@
         return $result;
     }
 
+    function getUsers() {
+        include "ayar.php";
+
+        $query = "SELECT username, mail, number from uyeler";
+        $result = mysqli_query($baglanti, $query);
+        mysqli_close($baglanti);
+        return $result;
+    }
+
     function isLoggedin() {
         if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             return true;
