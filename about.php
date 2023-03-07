@@ -25,24 +25,7 @@
             <img src="img\IMG-63fa4084a7abf0.57452154.jpg" height="430" width="637">
         </div>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
