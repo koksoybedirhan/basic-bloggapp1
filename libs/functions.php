@@ -24,4 +24,12 @@
             return false;
         }
     }
+
+    function isAdmin() {
+        if (isLoggedin() && isset($_SESSION["userType"]) && $_SESSION["userType"] === "Admin") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 ?>
