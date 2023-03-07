@@ -13,17 +13,21 @@
             <table class="table table-striped">
                 <thead>
                     <tr class="table-primary">
+                        <th scope="col">ID Numarası</th>
                         <th scope="col">Kullanıcı Adı</th>
                         <th scope="col">Mail Adresi</th>
                         <th scope="col">Numara</th>
+                        <th scope="col">Üye İşlemleri</th>
                     </tr>
                 </thead>  
-                <?php  $result = getusers();  while($uyeler = mysqli_fetch_assoc($result)): ?>
+                <?php  $result = getUsers();  while($uyeler = mysqli_fetch_assoc($result)): ?>
                 <tbody> 
                     <tr class="table-info"> 
+                        <th><?php echo $uyeler["id"]?></th>
                         <th><?php echo $uyeler["username"]?></th>
                         <th><?php echo $uyeler["mail"]?></th>
                         <th><?php echo $uyeler["number"]?></th>
+                        <th><a class="btn btn-danger btn-sm" href="delete-user.php?id=<?php echo $uyeler["id"]?>">Üye Silme</a></th>
                     </tr>
                 </tbody>
                 <?php endwhile; ?>
