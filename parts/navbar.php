@@ -8,7 +8,15 @@
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 
-            <?php if (isLoggedin()): ?>
+            <?php if(isAdmin()): ?>
+
+                <li><a href="./index.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Ana Sayfa</button></a></li>
+                <li><a href="./blog-create.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Araç Ekleme</button></a></li>
+                <li><a href="./categories.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Kategori Ekleme</button></a></li>
+                <li><a href="./users.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Üyeler</button></a></li>
+                <li><a href="./about.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Hakkında</button></a></li>
+
+            <?php elseif (isLoggedin()): ?>
 
                 <li><a href="./index.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Ana Sayfa</button></a></li>
                 <li><a href="./blog-create.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Araç Ekleme</button></a></li>
