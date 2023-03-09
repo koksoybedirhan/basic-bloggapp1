@@ -66,6 +66,9 @@
                 </div>
             </div>
         </div>
+        <div class="col-6">
+            <img src="img/6.jpeg" width="637" height="430">
+        </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
