@@ -8,6 +8,7 @@
         exit;
     }
 
+    
 ?>
 
 <?php include "parts/header.php" ?>
@@ -25,12 +26,13 @@
                             style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                             <img src="img/<?=$_SESSION['image']?>"
                                 alt="Avatar" class="img-fluid my-5" width="400"/>
-                            <h5><?php echo htmlspecialchars($_SESSION["username"])?></h5>
+                            <h5 style="color: black;"><?php echo htmlspecialchars($_SESSION["username"])?></h5>
+                            <br>
                             <i class="far fa-edit mb-5"></i>
                             </div>
                             <div class="col-md-8">
                             <div class="card-body p-4">
-                                <h6>Information</h6>
+                                <h6>Bilgiler</h6>
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                 <div class="col-4 mb-3">
@@ -46,17 +48,13 @@
                                     <p class="text-muted"><?php echo htmlspecialchars($_SESSION["userType"])?></p>
                                 </div>
                                 </div>
-                                <h6>Projects</h6>
+                                <h6>Kişisel Tanımlama</h6>
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
-                                <div class="col-6 mb-3">
-                                    <h6>Recent</h6>
-                                    <p class="text-muted">Lorem ipsum</p>
-                                </div>
-                                <div class="col-6 mb-3">
-                                    <h6>Most Viewed</h6>
-                                    <p class="text-muted">Dolor sit amet</p>
-                                </div>
+                                    <div class="col-12 mb-3">
+                                        <h6>Açıklama</h6>
+                                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dicta repellat! Ullam, minus! Quidem architecto delectus pariatur ab a perspiciatis?</p>
+                                    </div>
                                 </div>
                                 <div class="d-flex justify-content-start">
                                 <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
