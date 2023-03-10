@@ -35,6 +35,15 @@
         return $result;
     }
 
+    function getMessageArac() {
+        include "ayar.php";
+
+        $query = "SELECT id, usname, message, mdate from mesajarac";
+        $result = mysqli_query($baglanti, $query);
+        mysqli_close($baglanti);
+        return $result;
+    }
+
     function deleteUser(int $id) {
         include "ayar.php";
         $query = "DELETE FROM uyeler WHERE id=$id";
