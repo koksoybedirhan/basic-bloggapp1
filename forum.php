@@ -43,24 +43,32 @@
         <div class="col-3">
             <h2 style="text-align: center;">Konular</h2>
             <ul class="list-group">
-                <li style="text-align: center;"><a href="general-chat.php" class="list-group-item list-group-item-action"><button class="btn btn-outline-black me-2">Genel Sohbet</button></a></li>
+                <li style="text-align: center;"><a href="forum.php" class="list-group-item list-group-item-action"><button class="btn btn-outline-black me-2">Genel Sohbet</button></a></li>
                 <li style="text-align: center;"><a href="vehicle-marketing.php" class="list-group-item list-group-item-action"><button class="btn btn-outline-black me-2">Araç Pazarlama</button></a></li>
             </ul>
+            <br><br>
+            <h6 style="text-align: center;">Forum'a Mesaj Atanlar</h6>
+            <?php  $result = getMessage();  while($mesaj2 = mysqli_fetch_assoc($result)): ?>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-action"><?php echo $mesaj2["usname"]?></li>
+                </ul>
+            <?php endwhile;?>
         </div>
         <div class="col-9">
-            <h2 style="text-align: center;">Forum Kısmı</h2>
+            <h2 style="text-align: center;">Forum Kısmı - Genel Sohbet</h2>
                 <p style="border-style: groove; width: 966px; height: 400px">
                 <?php $result = getMessage();  while($mesaj = mysqli_fetch_assoc($result)): ?>
                     <?php echo $mesaj["usname"].": ".$mesaj["message"]." /   ".$mesaj["mdate"]." "; ?>
                     <br>
                 <?php endwhile; ?>                
                 </p>
-            <br><br>
+            <br>
 
             <form action="forum.php" method="POST">
-                <textarea name="message" id="message" style="resize: none; width: 600px; height: 25px;"></textarea>
+                <p style="text-align: center;">Mesaj Gönderme</p>
+                <textarea name="message" id="message" style="resize: none; width: 966px; height: 25px;"></textarea>
                 <br>
-                <input type="submit" name="buton" id="buton" class="btn btn-primary">
+                    <input type="submit" name="buton" id="buton" class="btn btn-primary">
             </form>
         </div>
     </div>
