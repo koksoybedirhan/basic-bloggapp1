@@ -35,6 +35,15 @@
         return $result;
     }
 
+    function getDes() {
+        include "ayar.php";
+
+        $query = "SELECT des from uyeler";
+        $result = mysqli_query($baglanti, $query);
+        mysqli_close($baglanti);
+        return $result;
+    }
+
     function getMessageArac() {
         include "ayar.php";
 
