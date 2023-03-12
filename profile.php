@@ -8,7 +8,6 @@
         exit;
     }
 
-    
 ?>
 
 <?php include "parts/header.php" ?>
@@ -53,7 +52,7 @@
                                 <div class="row pt-1">
                                     <div class="col-12 mb-3">
                                         <h6>Açıklama</h6>
-                                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dicta repellat! Ullam, minus! Quidem architecto delectus pariatur ab a perspiciatis?</p>
+                                        <p class="text-muted"><?php echo htmlspecialchars($_SESSION["des"])?></p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-start">
@@ -78,3 +77,4 @@
     <?php include "parts/footer.php" ?>
 </div>
 </html>
+
