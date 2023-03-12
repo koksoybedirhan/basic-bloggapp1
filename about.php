@@ -11,9 +11,9 @@
         <div class="col-6">
             <blockquote class="blockquote">
                 <p class="mb-0">
-                Türkiye'nin otomobil piyasasında lider online pazar yeri olan arabam.com, 2000 yılında kurulmuş ve 2016 yılında iLab grup şirketleri arasına katılmıştır.
+                Türkiye'nin otomobil piyasasında lider online pazar yeri olan bedirhankoksoy.com, 2022 yılında kurulmuş ve 2023 yılında BK Group şirketleri arasına katılmıştır.
                 <br>
-                Otomotiv ticaret ve hizmetlerinin lider, yenilikçi ve en güvenilir teknoloji platformu olmak vizyonu ile tüm sistemini mükemmelleştirme odaklı çalışan arabam.com ekibi, her ay yeni fonksiyonlarla kullanıcılarının deneyimini iyileştirmeyi amaçlıyor.
+                Otomotiv ticaret ve hizmetlerinin lider, yenilikçi ve en güvenilir teknoloji platformu olmak vizyonu ile tüm sistemini mükemmelleştirme odaklı çalışan bedirhankoksoy.com ekibi, her ay yeni fonksiyonlarla kullanıcılarının deneyimini iyileştirmeyi amaçlıyor.
                 <br>
                 bedirhankoksoy.com, ilan listeleme platformu olmanın dışında anında araç alım sistemi Trink sat!, piyasa değeri sorgulama aracı Arabam Kaç Para, hem anlık piyasa değeri gelişimini takip edebileceğiniz hem de aracınız ile ilgili her şeyi özel fiyatlarla alabileceğiniz arabam/garaj özelliği ve kurumsal üyelerinin araç tedariğine yönelik arabam/tedarik hizmeti ile kullanıcılarına uçtan uca bir hizmet sunuyor.
                 </p>
