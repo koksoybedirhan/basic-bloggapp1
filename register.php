@@ -3,8 +3,8 @@
     include "libs/functions.php";
     include "libs/vars.php";
 
-    $username = $mail = $number = $password = $confpassword = "";
-    $usernameerr = $mailerr = $numbererr = $passworderr = $confpassworderr = "";
+    $username = $mail = $number = $password = $des = $confpassword = "";
+    $usernameerr = $mailerr = $numbererr = $passworderr = $des = $confpassworderr = "";
 
     if (isset($_POST["register"])) {
         
@@ -91,6 +91,20 @@
             $number = $_POST["number"];
         }
 
+        //description
+        if(empty(trim($_POST["des"])))
+        {
+            $numbererr = "Kişi Özeti girmelisiniz.";
+        }
+        elseif (strlen(trim($_POST["des"])) < 10 or strlen(trim($_POST["des"])) > 200) 
+        {
+            $deserr = "Açıklama 10-200 karakter arasında olmalıdır.";
+        }
+        else
+        {
+            $des = $_POST["des"];
+        }
+
         //password
         if(empty(trim($_POST["password"])))
         {
@@ -120,9 +134,9 @@
         }
 
         //veritabanı
-        if(empty($usernameerr) && empty($mailerr) && empty($numbererr) && empty($passworderr))
+        if(empty($usernameerr) && empty($mailerr) && empty($numbererr) && empty($passworderr) && empty($deserr))
         {
-            $sql = "INSERT INTO uyeler (username, mail, number, password) VALUES (?,?,?,?)";
+            $sql = "INSERT INTO uyeler (username, mail, number, password, des) VALUES (?,?,?,?,?)";
             
             if($durum = mysqli_prepare($baglanti, $sql))
             {
@@ -130,8 +144,9 @@
                 $mparam = $mail;
                 $nparam = $number;
                 $pparam = $password;
+                $dparam = $des;
 
-                mysqli_stmt_bind_param($durum, "ssss", $uparam, $mparam, $nparam, $pparam);
+                mysqli_stmt_bind_param($durum, "sssss", $uparam, $mparam, $nparam, $pparam, $dparam);
 
                 if(mysqli_stmt_execute($durum))
                 {
@@ -173,6 +188,12 @@
                                 <label for="number" class="form-label">Telefon Numarası</label>
                                 <input type="number" name="number" id="number" class="form-control <?php echo (!empty($numbererr)) ? 'is-invalid': ''?>" value="<?php echo $number; ?>">
                                 <span class="invalid-feedback"><?php echo $numbererr ?></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="des" class="form-label">Kişi Özeti</label>
+                                <input type="text" name="des" id="des" class="form-control <?php echo (!empty($deserr)) ? 'is-invalid': ''?>" value="<?php echo $des; ?>">
+                                <span class="invalid-feedback"><?php echo $deserr ?></span>
                             </div>
 
                             <div class="row">
