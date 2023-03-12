@@ -44,6 +44,25 @@
         return $result;
     }
 
+    function getUsersEdit(int $id) {
+        include "ayar.php";
+    
+        $query = "SELECT * from uyeler WHERE id='$id'";
+        $result = mysqli_query($baglanti,$query);
+        mysqli_close($baglanti);
+        return $result;
+    }
+
+    function editUsers(string $id, string $name, string $mail, string $number, string $pass, string $des) {
+        include "ayar.php";
+    
+        $query = "UPDATE uyeler SET username='$name', mail='$mail', number='$number', password='$pass', des='$des' WHERE id=$id";
+        $result = mysqli_query($baglanti,$query);
+        echo mysqli_error($baglanti);
+    
+        return $result;
+    }
+
     function getMessageArac() {
         include "ayar.php";
 
