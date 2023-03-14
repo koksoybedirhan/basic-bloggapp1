@@ -48,7 +48,7 @@
 
             <?php if (isLoggedin()): ?>
 
-                <li><a href="#" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Hoş geldiniz: <?php echo $_SESSION["username"]?></button></a></li>
+                <li><a href="#" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2"><?php echo $_SESSION["username"]?></button></a></li>
                 <li><a href="./profile.php" class="nav-link px-2 text-white"><button class="btn btn-outline-light me-2">Profil</button></a></li>
                 <li><a href="./logout.php" class="nav-link px-2 text-white"><button class="btn btn-outline-danger me-2">Çıkış</button></a></li>
 
@@ -65,3 +65,4 @@
     </div>
 </header>
 </body>
+ 
