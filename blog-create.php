@@ -29,7 +29,7 @@
         }
         elseif (strlen(trim($_POST["description"])) < 10 or strlen(trim($_POST["description"])) > 199) 
         {
-            $mailerr = "Açıklama 10-200 karakter arasında olmalıdır.";
+            $descriptionerr = "Açıklama 10-200 karakter arasında olmalıdır.";
         }
         else
         {
@@ -76,7 +76,7 @@
                 $tmp_name = $_FILES['image']['tmp_name'];
                 $error = $_FILES['image']['error'];
             
-                if ($img_size > 500000) {
+                if ($img_size > 1600000) {
                     $imageerr = "Dosya çok büyük.";
                 }else {
                     $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
@@ -121,9 +121,10 @@
 ?>
 
 <?php include "parts/header.php"?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
+    <div class="container">
         <div class="row">
             <div class="col-6">
                 <div class="card">
@@ -176,6 +177,7 @@
                 </div>
             </div>
         </div>
+    </div>
     <br>
     <?php include "parts/footer.php" ?>
 </div>
