@@ -153,9 +153,10 @@
 ?>
 
 <?php include "parts/header.php" ?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
+    <div class="container">
         <div class="row">
             <div class="col-6">
                 <div class="card">
@@ -214,6 +215,7 @@
                 </div>
             </div>
         </div>
+    </div>
     <br>
     <?php include "parts/footer.php" ?>
 </div>
