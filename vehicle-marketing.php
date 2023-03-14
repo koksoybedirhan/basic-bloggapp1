@@ -36,12 +36,13 @@
 ?>
 
 <?php include "parts/header.php" ?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
+    <div class="container">
     <div class="row">
         <div class="col-3">
-            <h2 style="text-align: center;">Konular</h2>
+            <h2 style="text-align: center; border: 1px solid black; padding: 5px;">Konular</h2>
             <ul class="list-group">
                 <li style="text-align: center;"><a href="forum.php" class="list-group-item list-group-item-action"><button class="btn btn-outline-black me-2">Genel Sohbet</button></a></li>
                 <li style="text-align: center;"><a href="vehicle-marketing.php" class="list-group-item list-group-item-action"><button class="btn btn-outline-black me-2">Araç Pazarlama</button></a></li>
@@ -71,6 +72,7 @@
                     <input type="submit" name="buton" id="buton" class="btn btn-primary">
             </form>
         </div>
+    </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
