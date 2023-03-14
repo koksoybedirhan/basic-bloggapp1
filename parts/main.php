@@ -7,7 +7,8 @@
     #reklam-h{
         text-align: center;
         font-size: large;
-
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 
     #reklam-p{
