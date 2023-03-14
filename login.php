@@ -27,7 +27,7 @@
         }
 
         if(empty($username_err) && empty($password_err)) {
-            $sql = "SELECT id, username, password, mail, number, image, userType FROM uyeler WHERE username = ?";
+            $sql = "SELECT id, username, password, mail, number, image, userType, des FROM uyeler WHERE username = ?";
 
             if($durum = mysqli_prepare($baglanti, $sql)) {
 
@@ -40,7 +40,7 @@
 
                     if(mysqli_stmt_num_rows($durum) == 1) {
   
-                        mysqli_stmt_bind_result($durum, $id, $username, $password, $mail, $number, $image, $userType);
+                        mysqli_stmt_bind_result($durum, $id, $username, $password, $mail, $number, $image, $userType, $des);
                         if(mysqli_stmt_fetch($durum)) 
                         {            
                             $_SESSION["loggedin"] = true;
@@ -50,6 +50,7 @@
                             $_SESSION["image"] = $image;
                             $_SESSION["id"] = $id;
                             $_SESSION["userType"] = $userType;
+                            $_SESSION["des"] = $des;
 
                             header("location: profile.php");
                         } 
@@ -69,7 +70,7 @@
 ?>
 
 <?php include "parts/header.php"?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php"; ?>
     <br>
 
@@ -79,6 +80,7 @@
     }
     ?>
 
+    <div class="container">
     <div class="row">
         <div class="row">
             <div class="col-6">
@@ -105,6 +107,7 @@
                 <img src="img/login.jpeg">
             </div>
         </div>
+    </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
