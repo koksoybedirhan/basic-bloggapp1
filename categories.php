@@ -48,9 +48,10 @@
 ?>
 
 <?php include "parts/header.php" ?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
+    <div class="container">
     <div class="row">
         <div class="col-6">
             <div class="card">
@@ -69,6 +70,7 @@
         <div class="col-6">
             <img src="img/6.jpeg" width="637" height="430">
         </div>
+    </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
