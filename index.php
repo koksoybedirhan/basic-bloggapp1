@@ -4,14 +4,16 @@
 ?>
 
 <?php include "parts/header.php" ?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
-    <div class="row">
-        <?php
-            include "parts/menu.php";
-            include "parts/main.php";
-        ?> 
+    <div class="container">
+        <div class="row">
+            <?php
+                include "parts/menu.php";
+                include "parts/main.php";
+            ?> 
+        </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
