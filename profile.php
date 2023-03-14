@@ -10,10 +10,13 @@
 
 ?>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
 <?php include "parts/header.php" ?>
-<div class="container my-4">
+<div>
     <?php include "parts/navbar.php" ?>
     <br>
+    <div class="container">
     <div class="row">
         <div class="col-12">
             <section style="background-color: #f4f5f7;">
@@ -31,34 +34,32 @@
                             </div>
                             <div class="col-md-8">
                             <div class="card-body p-4">
-                                <h6>Bilgiler</h6>
+                                <h6>Bilgiler <i class="fa-regular fa-user"></i></h6>
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                 <div class="col-4 mb-3">
-                                    <h6>Mail Adresi</h6>
+                                    <h6>Mail Adresi <i class="fa-regular fa-envelope"></i></h6>
                                     <p class="text-muted"><?php echo htmlspecialchars($_SESSION["mail"])?></p>
                                 </div>
                                 <div class="col-4 mb-3">
-                                    <h6>Numara</h6>
+                                    <h6>Numara <i class="fa-solid fa-phone"></i></i></h6>
                                     <p class="text-muted"><?php echo htmlspecialchars($_SESSION["number"])?></p>
                                 </div>
                                 <div class="col-4 mb-3">
-                                    <h6>Kullanıcı Yetkisi</h6>
+                                    <h6>Kullanıcı Yetkisi <i class="fa-solid fa-crown"></i></i></h6>
                                     <p class="text-muted"><?php echo htmlspecialchars($_SESSION["userType"])?></p>
                                 </div>
                                 </div>
-                                <h6>Kişisel Tanımlama</h6>
+                                <h6>Kişisel Tanımlama <i class="fa-solid fa-circle-info"></i></h6>
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                     <div class="col-12 mb-3">
-                                        <h6>Açıklama</h6>
+                                        <h6>Kişi Özeti <i class="fa-regular fa-comment-dots"></i> </h6>
                                         <p class="text-muted"><?php echo htmlspecialchars($_SESSION["des"])?></p>
                                     </div>
-                                </div>
-                                <div class="d-flex justify-content-start">
-                                <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                                <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                                <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                                    <div class="mb-3" style="text-align: center;">
+                                        <a href="profile-edit.php" class="btn btn-primary">Profile Güncelleme</a>
+                                    </div>
                                 </div>
                             </div>
                             </div>
@@ -68,13 +69,10 @@
                 </div>
             </section>
             <br>
-           <div>
-                <a href="logout.php" class="btn btn-danger">Logout</a>
-           </div>
         </div>    
+    </div>
     </div>
     <br>
     <?php include "parts/footer.php" ?>
 </div>
 </html>
-
