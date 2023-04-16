@@ -57,12 +57,14 @@
         </div>
         <div class="col-9">
             <h2 style="text-align: center;">Forum Kısmı - Genel Sohbet</h2>
-                <p style="border-style: groove; width: 966px; height: 400px">
-                <?php $result = getMessage();  while($mesaj = mysqli_fetch_assoc($result)): ?>
-                    <?php echo $mesaj["usname"].": ".$mesaj["message"]." /   ".$mesaj["mdate"]." "; ?>
-                    <br>
-                <?php endwhile; ?>                
-                </p>
+                <div class="card">
+                    <p>
+                    <?php $result = getMessage();  while($mesaj = mysqli_fetch_assoc($result)): ?>
+                        <?php echo $mesaj["usname"].": ".$mesaj["message"]." /   ".$mesaj["mdate"]." "; ?>
+                        <br>
+                    <?php endwhile; ?>                
+                    </p>
+                </div>
             <br>
 
             <form action="forum.php" method="POST">
