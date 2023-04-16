@@ -57,12 +57,14 @@
         </div>
         <div class="col-9">
             <h2 style="text-align: center;">Forum Kısmı - Araç Pazarlama</h2>
-                <p style="border-style: groove; width: 966px; height: 400px">
-                <?php $result = getMessageArac();  while($mesajarac = mysqli_fetch_assoc($result)): ?>
-                    <?php echo $mesajarac["usname"].": ".$mesajarac["message"]." /   ".$mesajarac["mdate"]." "; ?>
-                    <br>
-                <?php endwhile; ?>                
-                </p>
+                <div class="card">
+                    <p>
+                    <?php $result = getMessageArac();  while($mesajarac = mysqli_fetch_assoc($result)): ?>
+                        <?php echo $mesajarac["usname"].": ".$mesajarac["message"]." /   ".$mesajarac["mdate"]." "; ?>
+                        <br>
+                    <?php endwhile; ?>                
+                    </p>
+                </div>
             <br>
 
             <form action="vehicle-marketing.php" method="POST">
